@@ -34,14 +34,14 @@
         }
 
         .navbar a:hover, .navbar a.active {
-            background-color: #1E90FF; /* Academic blue for highlight */
+            background-color: #0056B3; /* Darker academic blue */
             border-radius: 5px;
         }
 
         /* Header Section */
         .header {
             background-color: #E8E8E8; /* Gray background */
-            padding: 80px 20px 40px; /* Adjust padding to leave space for navbar */
+            padding: 80px 20px 40px;
             text-align: center;
             margin-top: 50px; /* Offset for navbar height */
         }
@@ -104,7 +104,7 @@
             margin-bottom: 20px;
             padding: 15px;
             background-color: white;
-            border-left: 4px solid #1E90FF; /* Academic blue left border */
+            border-left: 4px solid #0056B3; /* Darker academic blue left border */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
         }
@@ -121,14 +121,43 @@
             color: #555;
         }
 
-        /* Sections (hidden by default) */
-        .content {
-            padding-top: 20px;
-            display: none;
+        /* Past Seminar Accordion */
+        .accordion {
+            max-width: 800px;
+            margin: 20px auto;
         }
 
-        .content.active {
-            display: block;
+        .accordion-item {
+            margin-bottom: 10px;
+        }
+
+        .accordion-header {
+            background-color: #0056B3; /* Darker academic blue */
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion-header:hover {
+            background-color: #003F7F; /* Even darker on hover */
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .accordion-content p {
+            margin: 5px 0;
         }
     </style>
 </head>
@@ -168,11 +197,6 @@
                 <p><span>Date:</span> February 23, 2024</p>
                 <p><span>Speaker:</span> Prof. B</p>
             </div>
-            <div class="seminar-item">
-                <h3>Title of Seminar 3</h3>
-                <p><span>Date:</span> March 15, 2024</p>
-                <p><span>Speaker:</span> Dr. C</p>
-            </div>
         </div>
     </div>
 
@@ -182,7 +206,32 @@
             <h1>Past Seminars</h1>
             <p>Explore the seminars we organized in 2023 and earlier.</p>
         </div>
-        <!-- Add past seminar details here -->
+
+        <div class="accordion">
+            <!-- 2023 Section -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    2023 Seminars
+                </div>
+                <div class="accordion-content">
+                    <p><strong>Title:</strong> Seminar A</p>
+                    <p><strong>Date:</strong> March 10, 2023</p>
+                    <p><strong>Speaker:</strong> Dr. X</p>
+                </div>
+            </div>
+
+            <!-- 2022 Section -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    2022 Seminars
+                </div>
+                <div class="accordion-content">
+                    <p><strong>Title:</strong> Seminar Y</p>
+                    <p><strong>Date:</strong> June 20, 2022</p>
+                    <p><strong>Speaker:</strong> Prof. Z</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Contact Section -->
@@ -193,7 +242,7 @@
         </div>
     </div>
 
-    <!-- JavaScript for Navigation -->
+    <!-- JavaScript -->
     <script>
         function showSection(id) {
             const sections = document.querySelectorAll('.content');
@@ -207,6 +256,12 @@
                 link.classList.remove('active');
             });
             document.querySelector(`.navbar a[href="#${id}"]`).classList.add('active');
+        }
+
+        function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+            const isVisible = content.style.display === 'block';
+            content.style.display = isVisible ? 'none' : 'block';
         }
     </script>
 </body>
