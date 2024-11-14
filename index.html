@@ -121,7 +121,7 @@
             color: #555;
         }
 
-        /* Past Seminar Accordion */
+        /* Accordion Styles */
         .accordion {
             max-width: 800px;
             margin: 20px auto;
@@ -132,8 +132,8 @@
         }
 
         .accordion-header {
-            background-color: #333333; /* Dark gray background */
-            color: white;
+            background-color: #F0F0F0; /* Light gray background */
+            color: #333;
             padding: 10px;
             cursor: pointer;
             border-radius: 5px;
@@ -144,7 +144,7 @@
         }
 
         .accordion-header:hover {
-            background-color: #555555; /* Lighter gray on hover */
+            background-color: #E0E0E0; /* Slightly darker gray on hover */
         }
 
         .accordion-content {
@@ -172,7 +172,7 @@
     <!-- Home Section -->
     <div class="content active" id="home">
         <div class="header">
-            <h1>Combinatorics, Information Theory & Related Topics Seminar @ Xidian University</h1>
+            <h1>Graduate Student Learning Seminar</h1>
             <p>In addition to the research seminar, we will also be organizing a learning seminar in various topics for graduate students interested in Analysis & PDEs.</p>
         </div>
 
@@ -180,23 +180,6 @@
             <p><span>Organizers:</span> Ioakeim Ampatzoglou, Dan Ginsberg, Weilin Li, Vincent Martinez, Azita Mayeli</p>
             <p><span>Time:</span> Friday, 10:00am-11:00am EST</p>
             <p><span>Location:</span> GC 9116 (in-person only)</p>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="schedule">Schedule (2024)</div>
-
-        <div class="seminar-list">
-            <div class="seminar-item">
-                <h3>Title of Seminar 1</h3>
-                <p><span>Date:</span> January 12, 2024</p>
-                <p><span>Speaker:</span> Dr. A</p>
-            </div>
-            <div class="seminar-item">
-                <h3>Title of Seminar 2</h3>
-                <p><span>Date:</span> February 23, 2024</p>
-                <p><span>Speaker:</span> Prof. B</p>
-            </div>
         </div>
     </div>
 
@@ -258,3 +241,17 @@
             sections.forEach(section => {
                 section.classList.remove('active');
             });
+            document.getElementById(id).classList.add('active');
+        }
+
+        function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
