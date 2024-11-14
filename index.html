@@ -132,7 +132,7 @@
         }
 
         .accordion-header {
-            background-color: #0056B3; /* Darker academic blue */
+            background-color: #333333; /* Dark gray background */
             color: white;
             padding: 10px;
             cursor: pointer;
@@ -144,7 +144,7 @@
         }
 
         .accordion-header:hover {
-            background-color: #003F7F; /* Even darker on hover */
+            background-color: #555555; /* Lighter gray on hover */
         }
 
         .accordion-content {
@@ -215,8 +215,14 @@
                 </div>
                 <div class="accordion-content">
                     <p><strong>Title:</strong> Seminar A</p>
-                    <p><strong>Date:</strong> March 10, 2023</p>
+                    <p><strong>Date:</strong> January 15, 2023</p>
                     <p><strong>Speaker:</strong> Dr. X</p>
+                    <p><strong>Title:</strong> Seminar B</p>
+                    <p><strong>Date:</strong> April 12, 2023</p>
+                    <p><strong>Speaker:</strong> Prof. Y</p>
+                    <p><strong>Title:</strong> Seminar C</p>
+                    <p><strong>Date:</strong> July 22, 2023</p>
+                    <p><strong>Speaker:</strong> Dr. Z</p>
                 </div>
             </div>
 
@@ -226,9 +232,12 @@
                     2022 Seminars
                 </div>
                 <div class="accordion-content">
-                    <p><strong>Title:</strong> Seminar Y</p>
-                    <p><strong>Date:</strong> June 20, 2022</p>
-                    <p><strong>Speaker:</strong> Prof. Z</p>
+                    <p><strong>Title:</strong> Seminar D</p>
+                    <p><strong>Date:</strong> March 5, 2022</p>
+                    <p><strong>Speaker:</strong> Dr. W</p>
+                    <p><strong>Title:</strong> Seminar E</p>
+                    <p><strong>Date:</strong> October 20, 2022</p>
+                    <p><strong>Speaker:</strong> Prof. V</p>
                 </div>
             </div>
         </div>
@@ -249,20 +258,3 @@
             sections.forEach(section => {
                 section.classList.remove('active');
             });
-            document.getElementById(id).classList.add('active');
-
-            const navLinks = document.querySelectorAll('.navbar a');
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-            });
-            document.querySelector(`.navbar a[href="#${id}"]`).classList.add('active');
-        }
-
-        function toggleAccordion(header) {
-            const content = header.nextElementSibling;
-            const isVisible = content.style.display === 'block';
-            content.style.display = isVisible ? 'none' : 'block';
-        }
-    </script>
-</body>
-</html>
