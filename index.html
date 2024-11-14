@@ -14,11 +14,36 @@
             color: #333;
         }
 
+        /* Navigation Bar */
+        .navbar {
+            background-color: #2C3E50;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+        }
+
+        .navbar a:hover, .navbar a.active {
+            background-color: #1ABC9C;
+            border-radius: 5px;
+        }
+
         /* Header Section */
         .header {
-            background-color: #E8E8E8; /* Gray background for the title */
-            padding: 40px 20px;
+            background-color: #E8E8E8; /* Gray background */
+            padding: 80px 20px 40px; /* Adjust padding to leave space for navbar */
             text-align: center;
+            margin-top: 50px; /* Offset for navbar height */
         }
 
         .header h1 {
@@ -60,6 +85,14 @@
             margin: 30px 0;
         }
 
+        /* Schedule Section */
+        .schedule {
+            text-align: center;
+            font-size: 1.5em;
+            color: #2C3E50;
+            margin: 20px 0;
+        }
+
         /* Seminar List */
         .seminar-list {
             max-width: 800px;
@@ -87,42 +120,94 @@
             font-size: 0.9em;
             color: #555;
         }
+
+        /* Sections (hidden by default) */
+        .content {
+            padding-top: 20px;
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <div class="header">
-        <h1>Graduate Student Learning Seminar</h1>
-        <p>In addition to the research seminar, we will also be organizing a learning seminar in various topics for graduate students interested in Analysis & PDEs.</p>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#home" class="active" onclick="showSection('home')">Home</a>
+        <a href="#past" onclick="showSection('past')">Past Seminar</a>
+        <a href="#contact" onclick="showSection('contact')">Contact</a>
     </div>
 
-    <!-- Info Section -->
-    <div class="info">
-        <p><span>Organizers:</span> Ioakeim Ampatzoglou, Dan Ginsberg, Weilin Li, Vincent Martinez, Azita Mayeli</p>
-        <p><span>Time:</span> Friday, 10:00am-11:00am EST</p>
-        <p><span>Location:</span> GC 9116 (in-person only)</p>
+    <!-- Home Section -->
+    <div class="content active" id="home">
+        <div class="header">
+            <h1>Graduate Student Learning Seminar</h1>
+            <p>In addition to the research seminar, we will also be organizing a learning seminar in various topics for graduate students interested in Analysis & PDEs.</p>
+        </div>
+
+        <div class="info">
+            <p><span>Organizers:</span> Ioakeim Ampatzoglou, Dan Ginsberg, Weilin Li, Vincent Martinez, Azita Mayeli</p>
+            <p><span>Time:</span> Friday, 10:00am-11:00am EST</p>
+            <p><span>Location:</span> GC 9116 (in-person only)</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="schedule">Schedule (2024)</div>
+
+        <div class="seminar-list">
+            <div class="seminar-item">
+                <h3>Title of Seminar 1</h3>
+                <p><span>Date:</span> January 12, 2024</p>
+                <p><span>Speaker:</span> Dr. A</p>
+            </div>
+            <div class="seminar-item">
+                <h3>Title of Seminar 2</h3>
+                <p><span>Date:</span> February 23, 2024</p>
+                <p><span>Speaker:</span> Prof. B</p>
+            </div>
+            <div class="seminar-item">
+                <h3>Title of Seminar 3</h3>
+                <p><span>Date:</span> March 15, 2024</p>
+                <p><span>Speaker:</span> Dr. C</p>
+            </div>
+        </div>
     </div>
 
-    <!-- Divider -->
-    <div class="divider"></div>
+    <!-- Past Seminar Section -->
+    <div class="content" id="past">
+        <div class="header">
+            <h1>Past Seminars</h1>
+            <p>Explore the seminars we organized in 2023 and earlier.</p>
+        </div>
+        <!-- Add past seminar details here -->
+    </div>
 
-    <!-- Seminar List -->
-    <div class="seminar-list">
-        <div class="seminar-item">
-            <h3>Title of Seminar 1</h3>
-            <p><span>Date:</span> January 12, 2024</p>
-            <p><span>Speaker:</span> Dr. A</p>
-        </div>
-        <div class="seminar-item">
-            <h3>Title of Seminar 2</h3>
-            <p><span>Date:</span> February 23, 2024</p>
-            <p><span>Speaker:</span> Prof. B</p>
-        </div>
-        <div class="seminar-item">
-            <h3>Title of Seminar 3</h3>
-            <p><span>Date:</span> March 15, 2024</p>
-            <p><span>Speaker:</span> Dr. C</p>
+    <!-- Contact Section -->
+    <div class="content" id="contact">
+        <div class="header">
+            <h1>Contact</h1>
+            <p>For inquiries, please reach out to us at: seminar@university.edu</p>
         </div>
     </div>
+
+    <!-- JavaScript for Navigation -->
+    <script>
+        function showSection(id) {
+            const sections = document.querySelectorAll('.content');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+
+            const navLinks = document.querySelectorAll('.navbar a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            document.querySelector(`.navbar a[href="#${id}"]`).classList.add('active');
+        }
+    </script>
 </body>
 </html>
