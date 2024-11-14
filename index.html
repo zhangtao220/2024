@@ -34,7 +34,7 @@
         }
 
         .navbar a:hover, .navbar a.active {
-            background-color: #1E90FF; /* Academic blue for highlight */
+            background-color: #0056B3; /* Academic blue for highlight */
             border-radius: 5px;
         }
 
@@ -104,7 +104,7 @@
             margin-bottom: 20px;
             padding: 15px;
             background-color: white;
-            border-left: 4px solid #1E90FF; /* Academic blue left border */
+            border-left: 4px solid #0056B3; /* 深蓝 */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
         }
@@ -143,7 +143,7 @@
     <!-- Home Section -->
     <div class="content active" id="home">
         <div class="header">
-            <h1>Graduate Student Learning Seminar</h1>
+            <h1>Combinatorics, Information Theory & Related Topics Seminar</h1>
             <p>In addition to the research seminar, we will also be organizing a learning seminar in various topics for graduate students interested in Analysis & PDEs.</p>
         </div>
 
@@ -176,13 +176,47 @@
         </div>
     </div>
 
-    <!-- Past Seminar Section -->
+     <!-- Past Seminar Section -->
     <div class="content" id="past">
         <div class="header">
             <h1>Past Seminars</h1>
             <p>Explore the seminars we organized in 2023 and earlier.</p>
         </div>
-        <!-- Add past seminar details here -->
+
+        <div class="accordion">
+            <!-- 2023 Section -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    2023 Seminars
+                </div>
+                <div class="accordion-content">
+                    <p><strong>Title:</strong> Seminar A</p>
+                    <p><strong>Date:</strong> January 15, 2023</p>
+                    <p><strong>Speaker:</strong> Dr. X</p>
+                    <p><strong>Title:</strong> Seminar B</p>
+                    <p><strong>Date:</strong> April 12, 2023</p>
+                    <p><strong>Speaker:</strong> Prof. Y</p>
+                    <p><strong>Title:</strong> Seminar C</p>
+                    <p><strong>Date:</strong> July 22, 2023</p>
+                    <p><strong>Speaker:</strong> Dr. Z</p>
+                </div>
+            </div>
+
+            <!-- 2022 Section -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    2022 Seminars
+                </div>
+                <div class="accordion-content">
+                    <p><strong>Title:</strong> Seminar D</p>
+                    <p><strong>Date:</strong> March 5, 2022</p>
+                    <p><strong>Speaker:</strong> Dr. W</p>
+                    <p><strong>Title:</strong> Seminar E</p>
+                    <p><strong>Date:</strong> October 20, 2022</p>
+                    <p><strong>Speaker:</strong> Prof. V</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Contact Section -->
