@@ -279,6 +279,8 @@
 <!-- CSS Styles for Accordion -->
 <style>
 /* Past Seminars Accordion Styles */
+
+/* Past Seminars Accordion Styles */
 .accordion {
     display: flex;
     flex-direction: column;
@@ -287,41 +289,41 @@
 
 .accordion-item {
     width: 80%; /* Set accordion sections to 80% width */
-    margin-bottom: 10px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    overflow: hidden; /* Ensure the border works neatly */
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px; /* Increase spacing between items */
+    background-color: #f9f9f9; /* Light gray for entire item */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Smooth edges */
+    overflow: hidden; /* Ensure content stays within bounds */
 }
 
 .accordion-header {
-    background-color: #f0f0f0; /* Light gray for header background */
-    padding: 10px 15px;
+    background-color: #e0e0e0; /* Slightly darker gray for header background */
+    padding: 20px; /* Increase padding for more space */
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    border-bottom: 1px solid #ccc; /* Divider between header and content */
+    border-bottom: 1px solid #d3d3d3; /* Divider line below header */
+    text-align: left; /* Align header text to the left */
 }
 
 .accordion-header:hover {
-    background-color: #ddd; /* Slightly darker gray on hover */
+    background-color: #cccccc; /* Slightly darker gray on hover */
 }
 
 .accordion-content {
-    padding: 15px;
+    padding: 20px; /* Increase padding for more vertical spacing */
     display: none; /* Initially hidden */
 }
 
 .accordion-content p {
-    margin: 5px 0;
+    margin: 10px 0;
     font-size: 16px;
 }
 
 .accordion-content hr {
     border: none;
-    border-top: 1px solid #ccc;
-    margin: 10px 0;
+    border-top: 1px solid #d3d3d3; /* Subtle divider */
+    margin: 15px 0;
 }
 
 
