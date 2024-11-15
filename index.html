@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graduate Student Learning Seminar</title>
+    <title>Seminar</title>
     <style>
         /* General styles */
         body {
@@ -85,41 +85,52 @@
             margin: 30px 0;
         }
 
+
+
+        
         /* Schedule Section */
-        .schedule {
-            text-align: center;
-            font-size: 1.5em;
-            color: #2C3E50;
-            margin: 20px 0;
-        }
 
-        /* Seminar List */
-        .seminar-list {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
+.schedule {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+}
 
-        .seminar-item {
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: white;
-            border-left: 4px solid #0056B3; /* 深蓝 */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
+.seminar-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        .seminar-item h3 {
-            margin: 0;
-            font-size: 1.2em;
-            color: #2C3E50;
-        }
+.seminar-item {
+    background-color: #fff;
+    border: 2px solid #007BFF; /* Darker blue for the border */
+    border-left: 8px solid #0056b3; /* Slightly darker blue for the left line */
+    padding: 15px;
+    margin: 10px 0;
+    width: 90%; /* Adjust width as desired */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
 
-        .seminar-item p {
-            margin: 5px 0;
-            font-size: 0.9em;
-            color: #555;
-        }
+.seminar-item h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.seminar-item p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.seminar-item span {
+    font-weight: bold;
+    color: #555;
+}
+
+        
 
         /* Sections (hidden by default) */
         .content {
@@ -161,25 +172,29 @@
 
         <div class="divider"></div>
 
-        <div class="schedule">Schedule (2024)</div>
 
-        <div class="seminar-list">
-            <div class="seminar-item">
-                <h3>Title of Seminar 1</h3>
-                <p><span>Date:</span> January 12, 2024</p>
-                <p><span>Speaker:</span> Dr. A</p>
-            </div>
-            <div class="seminar-item">
-                <h3>Title of Seminar 2</h3>
-                <p><span>Date:</span> February 23, 2024</p>
-                <p><span>Speaker:</span> Prof. B</p>
-            </div>
-            <div class="seminar-item">
-                <h3>Title of Seminar 3</h3>
-                <p><span>Date:</span> March 15, 2024</p>
-                <p><span>Speaker:</span> Dr. C</p>
-            </div>
-        </div>
+
+        
+<div class="schedule">Schedule (2024)</div>
+
+<div class="seminar-list">
+    <div class="seminar-item">
+        <h3>Title of Seminar 1</h3>
+        <p><span>Date:</span> January 12, 2024</p>
+        <p><span>Speaker:</span> Dr. A</p>
+    </div>
+    <div class="seminar-item">
+        <h3>Title of Seminar 2</h3>
+        <p><span>Date:</span> February 23, 2024</p>
+        <p><span>Speaker:</span> Prof. B</p>
+    </div>
+    <div class="seminar-item">
+        <h3>Title of Seminar 3</h3>
+        <p><span>Date:</span> March 15, 2024</p>
+        <p><span>Speaker:</span> Dr. C</p>
+    </div>
+</div>
+
     </div>
 
 
