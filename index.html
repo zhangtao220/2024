@@ -276,6 +276,9 @@
 <!-- CSS Styles for Accordion -->
 <style>
    /* Past Seminars Accordion Styles */
+
+
+/* Past Seminars Accordion Styles */
 .accordion {
     display: flex;
     flex-direction: column;
@@ -283,26 +286,25 @@
 }
 
 .accordion-item {
-    width: 80%; /* Set accordion sections to 80% width */
+    width: 160%; /* Set accordion sections to double the original width */
     margin-bottom: 10px;
-    border: 1px solid #000;
+    background-color: #e6f7ff; /* Light blue background */
     border-radius: 5px;
-    overflow: hidden; /* Ensure the border works neatly */
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent content overflow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: slight shadow for depth */
 }
 
 .accordion-header {
-    background-color: #f0f0f0; /* Light gray for header background */
-    padding: 10px 15px;
+    background-color: #cceeff; /* Slightly darker blue for header */
+    padding: 15px;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    border-bottom: 1px solid #ccc; /* Divider between header and content */
+    border-bottom: 1px solid #99ccff; /* Divider between header and content */
 }
 
 .accordion-header:hover {
-    background-color: #ddd; /* Slightly darker gray on hover */
+    background-color: #b3e0ff; /* Slightly darker blue on hover */
 }
 
 .accordion-content {
@@ -317,9 +319,10 @@
 
 .accordion-content hr {
     border: none;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #b3e0ff;
     margin: 10px 0;
 }
+
 
 </style>
 
