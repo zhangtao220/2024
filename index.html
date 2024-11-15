@@ -275,49 +275,52 @@
 </script>
 <!-- CSS Styles for Accordion -->
 <style>
-    .accordion {
-        max-width: 800px;
-        margin: 20px auto;
-    }
+   /* Past Seminars Accordion Styles */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align content */
+}
 
-    .accordion-item {
-        margin-bottom: 10px;
-    }
+.accordion-item {
+    width: 80%; /* Set accordion sections to 80% width */
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    overflow: hidden; /* Ensure the border works neatly */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-    .accordion-header {
-        background-color: #F0F0F0; /* Light gray background */
-        color: #333;
-        padding: 10px;
-        cursor: pointer;
-        border-radius: 5px;
-        font-weight: bold;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+.accordion-header {
+    background-color: #f0f0f0; /* Light gray for header background */
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc; /* Divider between header and content */
+}
 
-    .accordion-header:hover {
-        background-color: #E0E0E0; /* Slightly darker gray on hover */
-    }
+.accordion-header:hover {
+    background-color: #ddd; /* Slightly darker gray on hover */
+}
 
-    .accordion-content {
-        display: none; /* Default hidden */
-        padding: 10px;
-        background-color: white;
-        border: 1px solid #ddd;
-        border-top: none;
-        border-radius: 0 0 5px 5px;
-    }
+.accordion-content {
+    padding: 15px;
+    display: none; /* Initially hidden */
+}
 
-    .accordion-content p {
-        margin: 5px 0;
-    }
+.accordion-content p {
+    margin: 5px 0;
+    font-size: 16px;
+}
 
-    .accordion-content hr {
-        border: none;
-        border-top: 1px solid #ddd;
-        margin: 10px 0;
-    }
+.accordion-content hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
+
 </style>
 
 
@@ -332,6 +335,8 @@
             <p>For inquiries, please reach out to us at: seminar@university.edu</p>
         </div>
     </div>
+
+    
 
     <!-- JavaScript for Navigation -->
     <script>
