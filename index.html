@@ -374,41 +374,11 @@
             navLinks.forEach(link => {
                 link.classList.remove('active');
             });
-            document.querySelector(`.navbar a[href="#${id}"]`).classList.add('active');
+            document.querySelector(`.navbar a[href="${id}"]`).classList.add('active');
         }
     </script>
 
 
-      <!-- JavaScript for toggling sections -->
-    <script>
-        // Select all navigation links and content sections
-        const navLinks = document.querySelectorAll('.navbar a');
-        const sections = document.querySelectorAll('.content');
-
-        // Add click event listeners to navigation links
-        navLinks.forEach(link => {
-            link.addEventListener('click', event => {
-                event.preventDefault(); // Prevent default anchor behavior
-
-                // Remove active class from all links and sections
-                navLinks.forEach(nav => nav.classList.remove('active'));
-                sections.forEach(section => section.classList.remove('active'));
-
-                // Add active class to the clicked link
-                link.classList.add('active');
-
-                // Show the corresponding section
-                const targetSection = document.getElementById(link.dataset.section);
-                targetSection.classList.add('active');
-            });
-        });
-
-        // Show the Home section by default
-        document.getElementById('home').classList.add('active'); // Activate the Home section
-        navLinks[0].classList.add('active'); // Highlight the Home link
-    </script>
-
-
-    
+      
 </body>
 </html>
