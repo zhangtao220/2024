@@ -171,9 +171,9 @@
 <body>
     <!-- Navigation Bar -->
     <div class="navbar">
-        <a href="home" class="active" onclick="showSection('home')">Home</a>
-        <a href="past" onclick="showSection('past')">Past Seminars</a>
-        <a href="contact" onclick="showSection('contact')">Contact</a>
+        <a href="home" data-id="home" class="active" onclick="showSection('home')">Home</a>
+        <a href="past" data-id="home" onclick="showSection('past')">Past Seminars</a>
+        <a href="contact" data-id="home" onclick="showSection('contact')">Contact</a>
     </div>
 
     <!-- Home Section -->
@@ -371,10 +371,14 @@
             document.getElementById(id).classList.add('active');
 
             const navLinks = document.querySelectorAll('.navbar a');
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-            });
-            document.querySelector(`.navbar a[href="${id}"]`).classList.add('active');
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+        });
+        document.querySelector(`.navbar a[data-id="${id}"]`).classList.add('active');
+
+        // 使用 History API 更新 URL
+        const newUrl = `/${id}`;
+        history.pushState({ section: id }, '', newUrl);
         }
     </script>
 
