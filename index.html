@@ -617,6 +617,7 @@
                 link.classList.remove('active');
             });
             document.querySelector(`.navbar a[href="#${id}"]`).classList.add('active');
+            history.replaceState(null, '', '/'); // URL 不变
         }
     </script>
 </body>
