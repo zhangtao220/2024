@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="icon" type="image/png" href="xd.png">
+  <link rel="icon" type="image/png" href="xd.png">
     <title>Seminars@Xidian</title>
     <style>
         /* General styles */
@@ -100,7 +100,12 @@
             margin: 30px 0;
         }
 
-
+.subdivider {
+    width: 100%; /* 分割线的宽度，可以设置为固定宽度 */
+    height: 0.5px; /* 设置分割线的高度（粗细） */
+    background-color: #333333; /* 000设置分割线的颜色 */
+    margin: 20px 0; /* 给上下加一些间距 */
+}
 
 
         
@@ -147,9 +152,7 @@
     font-weight: bold;
     color: #555;
 }
-
-
-        
+   
 
         /* Sections (hidden by default) */
         .content {
@@ -160,6 +163,10 @@
         .content.active {
             display: block;
         }
+
+
+
+
         
 
     </style>
@@ -171,104 +178,337 @@
 <body>
     <!-- Navigation Bar -->
     <div class="navbar">
-        <a href="home" data-id="home" class="active" onclick="showSection('home')">Home</a>
-        <a href="past" data-id="home" onclick="showSection('past')">Past Seminars</a>
-        <a href="contact" data-id="home" onclick="showSection('contact')">Contact</a>
+        <a href="#home" class="active" onclick="showSection('home')">Home</a>
+        <a href="#problem" onclick="showSection('problem')">Problem Discussion</a>
+        <a href="#learning" onclick="showSection('learning')">Learning Seminars</a>
+        <a href="#past" onclick="showSection('past')">Past Seminars</a>
+        <a href="#contact" onclick="showSection('contact')">Contact</a>
     </div>
 
     <!-- Home Section -->
     <div class="content active" id="home">
         <div class="header">
-            <h1>Combinatorics, Information Theory & Related Topics Seminar</h1>
-            <p>In addition to the research seminar, we will also be organizing a learning seminar in various topics for graduate students interested in Analysis & PDEs.</p>
+            <h1>Combinatorics, Information Theory & Related Topics Seminar @ Xidian University</h1>
+            <p>The seminar mainly hosts speakers in the fields of combinatorics, information theory and related topics. Topics of interest include, 
+                but are not limited to, additive combinatorics, algebraic combinatorics, coding theory, combinatorial designs, cryptography, discrete geometry, extremal combinatorics, finite geometry, graph theory and incidence geometry.</p>
         </div>
 
         <div class="info">
-            <p><span>Organizers:</span> Ioakeim Ampatzoglou, Dan Ginsberg, Weilin Li, Vincent Martinez, Azita Mayeli</p>
-            <p><span>Time:</span> Friday, 10:00am-11:00am EST</p>
-            <p><span>Location:</span> GC 9116 (in-person only)</p>
+            <p><span>Organizer:</span>  <a href="https://taozhang220.github.io/" target="_blank">Tao Zhang</a></p>
+            <p><span>Time:</span> Thursday, 9:30am-11:30am UTC</p>
+            <p><span>Location:</span> Online / Cybersecurity Innovation Building A-1236（网络安全创新大楼12楼A-1236）</p>
         </div>
 
         <div class="divider"></div>
-
-
-
         
-<div class="schedule"> Schedule (2024) </div>
+<div class="schedule"> Schedule (2025 Jan.--Jun.) </div>
 
 <div class="seminar-list">
     <div class="seminar-item">
-        <h3>Title of Seminar 1</h3>
-        <p><span>Date:</span> January 12, 2024</p>
-        <p><span>Speaker:</span> Dr. A</p>
-        <p><span>Date:</span> January 12, 2024</p>
-        <p><span>Speaker:</span> Dr. A</p>
+               <p><span>Date:</span> March 6</p>
+        <p><span>Speaker:</span> TBA</p>
+        <p><span>Title:</span> TBA</p>
+        <p><span>Abstract:</span> TBA</p>
     </div>
     <div class="seminar-item">
-        <h3>Title of Seminar 2</h3>
-        <p><span>Date:</span> February 23, 2024</p>
-        <p><span>Speaker:</span> Prof. B</p>
+               <p><span>Date:</span> March 13</p>
+        <p><span>Speaker:</span> TBA</p>
+        <p><span>Title:</span> TBA</p>
+        <p><span>Abstract:</span> TBA</p>
+    </div>
+        <div class="seminar-item">
+        <p><span>Date:</span> March 20</p>
+        <p><span>Speaker:</span> TBA</p>
+        <p><span>Title:</span> TBA</p>
+        <p><span>Abstract:</span> TBA</p>
+    </div>
+            <div class="seminar-item">
+        <p><span>Date:</span> March 27</p>
+        <p><span>Speaker:</span> TBA</p>
+        <p><span>Title:</span>TBA </p>
+        <p><span>Abstract:</span> TBA</p>
     </div>
     <div class="seminar-item">
-        <h3>Title of Seminar 3</h3>
-        <p><span>Date:</span> March 15, 2024</p>
-        <p><span>Speaker:</span> Dr. C</p>
+        <p><span>Date:</span> April 3</p>
+        <p><span>Speaker:</span> TBA</p>
+        <p><span>Title:</span>TBA </p>
+        <p><span>Abstract:</span> TBA</p>
+    </div>
+    <div class="seminar-item">
+        <p><span>Date:</span> April 10</p>
+        <p><span>Speaker:</span> TBA</p>
+        <p><span>Title:</span>TBA </p>
+        <p><span>Abstract:</span> TBA</p>
+    </div>
+    <div class="seminar-item">
+        <p><span>Date:</span> April 17</p>
+        <p><span>Speaker:</span> TBA</p>
+        <p><span>Title:</span>TBA </p>
+        <p><span>Abstract:</span> TBA</p>
+    </div>
+    <div class="seminar-item">
+        <p><span>Date:</span> April 24</p>
+        <p><span>Speaker:</span> TBA</p>
+        <p><span>Title:</span>TBA </p>
+        <p><span>Abstract:</span> TBA</p>
+    </div>
+    <div class="seminar-item">
+        <p><span>Date:</span> May 8</p>
+        <p><span>Speaker:</span> TBA</p>
+        <p><span>Title:</span>TBA </p>
+        <p><span>Abstract:</span> TBA</p>
+    </div>
+    <div class="seminar-item">
+        <p><span>Date:</span> May 15</p>
+        <p><span>Speaker:</span> TBA</p>
+        <p><span>Title:</span>TBA </p>
+        <p><span>Abstract:</span> TBA</p>
+    </div>
+    <div class="seminar-item">
+        <p><span>Date:</span> May 22</p>
+        <p><span>Speaker:</span> TBA</p>
+        <p><span>Title:</span>TBA </p>
+        <p><span>Abstract:</span> TBA</p>
+    </div>
+    <div class="seminar-item">
+        <p><span>Date:</span> May 29</p>
+        <p><span>Speaker:</span> TBA</p>
+        <p><span>Title:</span>TBA </p>
+        <p><span>Abstract:</span> TBA</p>
+    </div>
+    <div class="seminar-item">
+        <p><span>Date:</span> June 5</p>
+        <p><span>Speaker:</span> TBA</p>
+        <p><span>Title:</span>TBA </p>
+        <p><span>Abstract:</span> TBA</p>
+    </div>
+    <div class="seminar-item">
+        <p><span>Date:</span> June 12</p>
+        <p><span>Speaker:</span> TBA</p>
+        <p><span>Title:</span>TBA </p>
+        <p><span>Abstract:</span> TBA</p>
+    </div>
+    <div class="seminar-item">
+        <p><span>Date:</span> June 19</p>
+        <p><span>Speaker:</span> TBA</p>
+        <p><span>Title:</span>TBA </p>
+        <p><span>Abstract:</span> TBA</p>
+    </div>
+    <div class="seminar-item">
+        <p><span>Date:</span> June 26</p>
+        <p><span>Speaker:</span> TBA</p>
+        <p><span>Title:</span>TBA </p>
+        <p><span>Abstract:</span> TBA</p>
     </div>
 </div>
 
     </div>
 
 
-
-
-
-    <!-- Past Seminar Section -->
-<div class="content" id="past">
+    <!-- Problem Discussion Section -->
+<div class="content" id="problem">
     <div class="header">
-        <h1>Past Seminars</h1>
-        <p>Explore the seminars we organized in 2023 and earlier.</p>
+        <h1>Problem Sharing & Discussion</h1>
+        <p>In this seminar, a volunteer will share an interesting problem, then everyone will engage in a discussion around it.</p>
     </div>
     
  <div class="divider"></div>
     
     <div class="accordion">
-        <!-- 2023 Section -->
+        <!-- 2024 Section -->
         <div class="accordion-item">
             <div class="accordion-header" onclick="toggleAccordion(this)">
-                2023 Seminars
+                2024 Problem Sharing & Discussion
             </div>
             <div class="accordion-content">
-                <p><strong>Title:</strong> Seminar A</p>
-                <p><strong>Date:</strong> January 15, 2023</p>
-                <p><strong>Speaker:</strong> Dr. X</p>
+                               <p><span>Date:</span> Nov. 28 </p>
+           <p><span>Speaker:</span> <a href="https://lliangxu.github.io/" target="_blank">Liangliang Xu</a></p>
+           <p><span>Title:</span> Online Recovery on Erasure-Coded Storage Systems </p>
+                <p><span>Time:</span> 2:30pm--4:30pm</p>
                 <hr>
-                <p><strong>Title:</strong> Seminar B</p>
-                <p><strong>Date:</strong> April 12, 2023</p>
-                <p><strong>Speaker:</strong> Prof. Y</p>
+              <p><span>Date:</span> Dec. 5 </p>
+           <p><span>Speaker:</span> <a href="https://taozhang220.github.io/" target="_blank">Tao Zhang</a></p>
+           <p><span>Title:</span> Lattice tilings of Z^n by cyclic burst limited magnitude error ball</p>
+                <p><span>Time:</span> 2:30pm--4:30pm</p>
+                 <hr>
+              <p><span>Date:</span> Dec. 12 </p>
+           <p><span>Speaker:</span> Menglong Zhang</p>
+           <p><span>Title:</span>Tight bounds towards a conjecture of Gallai </p>
+                <p><span>Time:</span> 2:30pm--4:30pm</p>
                 <hr>
-                <p><strong>Title:</strong> Seminar C</p>
-                <p><strong>Date:</strong> July 22, 2023</p>
-                <p><strong>Speaker:</strong> Dr. Z</p>
+              <p><span>Date:</span> Dec. 19 </p>
+           <p><span>Speaker:</span> Chengfei Xie</p>
+           <p><span>Title:</span>TBA </p>
+                <p><span>Time:</span> 2:30pm--4:30pm</p>
+                <hr>
+              <p><span>Date:</span> Dec. 26 </p>
+           <p><span>Speaker:</span> Tingting Chen</p>
+           <p><span>Title:</span>TBA </p>
+                <p><span>Time:</span> 2:30pm--4:30pm</p>
+            </div>
+        </div>
+<!-- 2025 Section -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                2025 Problem Sharing & Discussion
+            </div>
+            <div class="accordion-content">
+              <p><span>Date:</span> Jan. 2 </p>
+           <p><span>Speaker:</span> Zilong Wang</p>
+           <p><span>Title:</span>TBA </p>
+                <p><span>Time:</span> 2:30pm--4:30pm</p>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<!-- JavaScript for Accordion -->
+<script>
+    function toggleAccordion(header) {
+        const content = header.nextElementSibling;
+        const allContents = document.querySelectorAll('.accordion-content');
+
+        // Close other accordion items
+        allContents.forEach(section => {
+            if (section !== content) {
+                section.style.display = 'none';
+            }
+        });
+
+        // Toggle current section
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    }
+    
+</script>
+
+    
+<!-- CSS Styles for Accordion -->
+<style>
+    
+/* Problem Discussion Accordion Styles */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align content */
+}
+
+.accordion-item {
+    width: 70%; /* Set accordion sections to 80% width */
+    margin-bottom: 15px; /* Increase spacing between items */
+    background-color: #f9f9f9; /* #f9f9f9 Light gray for entire item */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Smooth edges */
+    overflow: hidden; /* Ensure content stays within bounds */
+}
+
+.accordion-header {
+    background-color: #6e8b6e; /* Slightly darker gray for header background */
+    padding: 20px; /* Increase padding for more space */
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 1px solid #d3d3d3; /* Divider line below header */
+    text-align: left; /* Align header text to the left */
+}
+
+.accordion-header:hover {
+    background-color: #9acd9a; /* F5F5F5 Slightly darker gray on hover */
+}
+
+.accordion-content {
+    padding: 20px; /* Increase padding for more vertical spacing */
+    display: none; /* Initially hidden */
+}
+
+.accordion-content p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.accordion-content hr {
+    border: none;
+    border-top: 1px solid #d3d3d3; /* Subtle divider */
+    margin: 15px 0;
+}
+
+
+</style>
+
+
+    
+    
+    <!-- Learning Section -->
+    <div class="content" id="learning">
+        <div class="header">
+            <h1>Learning Seminars</h1>
+            <p>In addition to the research seminar, we also organize a learning seminar in various topics for graduate students interested in Combinatorics & Information Theory.</p>
+        </div>
+ 
+  <div class="divider"></div>
+        
+
+
+<div class="seminar-list">
+    <div class="seminar-item">
+        
+<div class="schedule"> 
+    Post-Quantum Cryptography Seminar (2024 Nov.-- 2025 Jan.) 
+</div>
+       
+<div class="subdivider"></div>
+        <p><span>Organizer:</span> <a href="https://taozhang220.github.io/" target="_blank">Tao Zhang</a></p>
+        <p><span>Speaker:</span> Chengfei Xie </p>
+        <p><span>Time:</span> Thursday, 9:30am--11:30am UTC </p>
+        <p><span>Location:</span> Cybersecurity Innovation Building A-1236（网络安全创新大楼12楼A-1236）</p>
+        <p><span>Reference:</span> Lectures on geometry of numbers (B. Friedman)</p>
+    </div>
+ </div>
+        
+    </div>
+
+
+
+    
+
+    <!-- Past Seminar Section -->
+<div class="content" id="past">
+    <div class="header">
+        <h1>Past Seminars</h1>
+        <p>Explore the seminars we organized earlier.</p>
+    </div>
+    
+ <div class="divider"></div>
+    
+    <div class="accordion">
+        <!-- 2025 Section -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                2025 Seminars
+            </div>
+            <div class="accordion-content">
+                               <p><span>Date:</span> TBA</p>
+           <p><span>Speaker:</span> TBA</p>
+           <p><span>Title:</span>TBA </p>
+             <p><span>Abstract:</span> TBA</p>
+                <hr>
+              <p><span>Date:</span> TBA</p>
+        <p><span>Speaker:</span> TBA</p>
+        <p><span>Title:</span>TBA </p>
+        <p><span>Abstract:</span> TBA</p>
             </div>
         </div>
 
-        <!-- 2022 Section -->
-        <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-                2022 Seminars
-            </div>
-            <div class="accordion-content">
-                <p><strong>Title:</strong> Seminar D</p>
-                <p><strong>Date:</strong> March 5, 2022</p>
-                <p><strong>Speaker:</strong> Dr. W</p>
-                <hr>
-                <p><strong>Title:</strong> Seminar E</p>
-                <p><strong>Date:</strong> October 20, 2022</p>
-                <p><strong>Speaker:</strong> Prof. V</p>
-            </div>
-        </div>
     </div>
 </div>
+
+
 
 <!-- JavaScript for Accordion -->
 <script>
@@ -350,12 +590,14 @@
 
 
 
+
+
     
     <!-- Contact Section -->
     <div class="content" id="contact">
         <div class="header">
             <h1>Contact</h1>
-            <p>For inquiries, please reach out to us at: seminar@university.edu</p>
+            <p>For inquiries, please reach out to us at: zhant220@163.com (Tao Zhang)</p>
         </div>
     </div>
 
@@ -371,18 +613,11 @@
             document.getElementById(id).classList.add('active');
 
             const navLinks = document.querySelectorAll('.navbar a');
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-        });
-        document.querySelector(`.navbar a[data-id="${id}"]`).classList.add('active');
-
-        // 使用 History API 更新 URL
-        const newUrl = `/${id}`;
-        history.pushState({ section: id }, '', newUrl);
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            document.querySelector(`.navbar a[href="#${id}"]`).classList.add('active');
         }
     </script>
-
-
-      
 </body>
 </html>
