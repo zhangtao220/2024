@@ -179,14 +179,15 @@
     <!-- Navigation Bar -->
     <div class="navbar">
         <a href="#home" class="active" onclick="showSection('home')">Home</a>
-        <a href="#problem" onclick="showSection('problem')">Problem Discussion</a>
-        <a href="#learning" onclick="showSection('learning')">Learning Seminars</a>
-        <a href="#past" onclick="showSection('past')">Past Seminars</a>
-        <a href="#contact" onclick="showSection('contact')">Contact</a>
+        <a href="#home" data-section="home">Home</a>
+        <a href="#problem" data-section="problem">Problem Discussion</a>
+        <a href="#learning" data-section="learning">Learning Seminars</a>
+        <a href="#past" data-section="past">Past Seminars</a>
+        <a href="#contact" data-section="contact">Contact</a>
     </div>
 
     <!-- Home Section -->
-    <div class="content active" id="home">
+    <div class="content" id="home">
         <div class="header">
             <h1>Combinatorics, Information Theory & Related Topics Seminar @ Xidian University</h1>
             <p>The seminar mainly hosts speakers in the fields of combinatorics, information theory and related topics. Topics of interest include, 
@@ -605,20 +606,31 @@
 
     <!-- JavaScript for Navigation -->
     <script>
-        function showSection(id) {
-            const sections = document.querySelectorAll('.content');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-            document.getElementById(id).classList.add('active');
+       // Select all navigation links and content sections
+        const navLinks = document.querySelectorAll('.navbar a');
+        const sections = document.querySelectorAll('.content');
 
-            const navLinks = document.querySelectorAll('.navbar a');
-            navLinks.forEach(link => {
-                link.classList.remove('active');
+        // Add click event listeners to navigation links
+        navLinks.forEach(link => {
+            link.addEventListener('click', event => {
+                event.preventDefault(); // Prevent default anchor behavior
+
+                // Remove active class from all links and sections
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                sections.forEach(section => section.classList.remove('active'));
+
+                // Add active class to the clicked link
+                link.classList.add('active');
+
+                // Show the corresponding section
+                const targetSection = document.getElementById(link.dataset.section);
+                targetSection.classList.add('active');
             });
-            document.querySelector(`.navbar a[href="#${id}"]`).classList.add('active');
-            history.replaceState(null, '', '/'); // URL 不变
-        }
+        });
+
+        // Show the Home section by default
+        document.getElementById('home').classList.add('active'); // Activate the Home section
+        navLinks[0].classList.add('active'); // Highlight the Home link
     </script>
 </body>
 </html>
